@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panel Admin</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="pagina">
+        <header class="header">
+            <div class="nombre-sitio">
+                <h1 class="escritorio">SystemVet</h1>
+                <h1 class="movil">SV</h1>
+            </div>
+            <div class="barra">
+                <div class="menu-izquierdo">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="menu-derecho">
+                    <div class="mensajes caja">
+                        <a href="">
+                            <i class="fas fa-comment-alt"></i>
+                            Mensajes
+                            <span>20</span>
+                        </a>
+                    </div>
+                    <div class="alertas caja">
+                        <a href="">
+                            <i class="fas fa-bell"></i>
+                            alertas
+                            <span>20</span>
+                        </a>
+                    </div>
+                    <div class="cerrar caja">
+                        <a href="">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenedor-principal">
+            <aside class="sidebar">
+                <div class="usuario">
+                    <img src="./img/usuario.svg" alt="Profile Avatar">
+                    <p>Bienvenido: <span>Admin</span></p>
+                </div>
+                <div class="buscador">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="menu-admin">
+                    <h2>Menú de Administración</h2>
+                    <ul class="menu">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-address-book"></i>
+                                Clientes
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-chart-line"></i>
+                                Ventas
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-box"></i>
+                                Inventario
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-file-alt"></i>
+                                Facturas
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-calendar-alt"></i>
+                                Calendario
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-pencil-alt"></i>
+                                Editar Perfil
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-list"></i>
+                                        Ver Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fas fa-plus"></i>
+                                        Agregar Nuevo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="contenido">
+                <h2 class="encabezado">Administración de Clientes</h2>
+            
+                <form action="" class="formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre Cliente</label>
+                        <input type="text" name="" id="nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">DNI</label>
+                        <input type="text" name="" id="nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre Mascota</label>
+                        <input type="text" name="" id="nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">Teléfono</label>
+                        <input type="text" name="" id="nombre">
+                    </div>
+
+                    <div class="campo expandir">
+                        <label for="nombre">Detalle de consulta</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="campo expandir">
+                        <label for="">Tipo:</label>
+                        <div class="opciones">
+                            <input type="radio" value="perro" name="contact" id="perro">
+                            <label for="perro">Perro</label>
+
+                            <input type="radio" value="gato" name="contact" id="gato">
+                            <label for="gato">Gato</label>
+
+                            <input type="radio" value="otro" name="contact" id="otro">
+                            <label for="otro">Otro</label>
+                        </div>
+                    </div>
+
+                    <div class="campo expandir enviar">
+                        <input type="submit" class="boton" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

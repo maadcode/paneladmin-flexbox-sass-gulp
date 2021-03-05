@@ -1,0 +1,278 @@
+html {
+    @include box-sizing(border-box);
+    height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+
+body {
+    font-family: $fuente_principal;
+    height: 100%;
+    background: $gris;
+}
+
+input,
+textarea,
+input:active {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.centrado {
+    text-align:center;
+    display: flex;
+}
+
+.oculto {
+    display: none;
+}
+
+.no-menu.pagina {
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
+.pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+
+    .nombre-sitio {
+        padding: 0 1rem;
+        flex: 0 0 5rem;
+        background: $secundario;
+        @include desktop {
+            flex: 0 0 20rem;
+        }
+
+        h1 {
+            color: $blanco;
+        }
+
+        .escritorio {
+            display: none;
+            @include desktop {
+                display: block;
+            }
+        }
+
+        .movil {
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: $primario;
+
+    .menu-izquierdo {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        i {
+            color: $blanco;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        .fa-arrow-right {
+            display: none;
+        }
+    }
+
+    .menu-derecho {
+        display: flex;
+
+        .caja {
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background: darken($primario, 5);
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+
+                span {
+                    background: $alternativo;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    background: $grisOscuro;
+    flex: 0 0 20rem;
+    padding: 1rem;
+    color: #fff;
+    transition: all 0.4s;
+
+    .usuario {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+
+        img {
+            max-width: 5rem;
+        }
+
+        span {
+            font-weight: normal;
+            display: block;
+        }
+    }
+
+    .buscador {
+        margin-top: 1rem;
+
+        input[type="text"] {
+            width: 100%;
+            height: 3rem;
+            border: none;
+            border-radius: 10px;
+            padding-left: 1rem;
+            outline: none;
+        }
+    }
+}
+
+.menu-admin {
+    margin-top: 2rem;
+
+    .menu {
+        list-style: none;
+        padding: 0 0 0 1rem;
+
+        > li {
+            padding: 0.5rem;
+
+            &:hover,
+            &:active {
+
+                ul {
+                    display: block;
+                }
+            }
+
+            a {
+                padding: 0.5rem;
+                color: $blanco;
+                text-decoration: none;
+                transition: all 0.4s;
+
+                &:hover {
+                    background: $primario;
+                    padding-left: 2rem;
+                }
+            }
+
+            ul {
+                display: none;
+                padding: 1rem;
+                margin-top: 1rem;
+                list-style: none;
+                background: darken($grisOscuro, 3);
+
+                li {
+                    margin-bottom: 1rem;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+}
+
+.contenido {
+    flex: 1;
+    padding: 2rem;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .campo {
+        flex: 0 0 100%;
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+
+        @include tablet {
+            flex: 0 0 calc(50% - 1rem);
+        }
+
+        &.expandir {
+            flex: 0 0 calc(100% - 1rem);
+            align-items: flex-start;
+
+            label {
+                flex: 0 0 15%;
+            }
+
+            textarea {
+                flex: 1;
+            }
+        }
+
+        label {
+            flex: 0 0 30%;
+        }
+
+        input[type="text"] {
+            flex: 0 0 70%;
+        }
+
+        .opciones {
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            label {
+                padding-left: 1rem;
+            }
+        }
+
+        &.enviar {
+            display: flex;
+            justify-content: flex-end;
+
+            .boton {
+                @include boton($primario);
+            }
+        }
+    }
+}
